@@ -34,7 +34,11 @@ export default function Home({ countries }) {
               <p>
                 {capital} 
               </p>
-              <p>{languages.map(({ name: languageName }) => languageName)}</p>
+              <ul>{languages.map(
+                ({ name: languageName }) => (
+                  <li key={languageName}>{languageName}</li>)
+                )}
+              </ul>
             </a>
           </div>
         )
